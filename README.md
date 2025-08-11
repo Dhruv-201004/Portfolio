@@ -21,13 +21,7 @@ Explore my portfolio live at:
 /images       # Portfolio images
 /src
   |-components   # Reusable components
-.gitignore
-.eslintrc.js
-index.html
-package.json
-tailwind.config.js
-vite.config.ts
-
+README.md
 ```
 
 ## 💡 Features

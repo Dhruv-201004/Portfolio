@@ -52,11 +52,29 @@ const Projects = React.memo(() => {
         date: "May 2025",
         category: "React",
       },
+      {
+        title: "Splitr",
+        description:
+          "Full-stack MERN app for managing shared expenses with automatic settlements, flexible splits, and seamless group or 1-to-1 tracking.",
+        image: "/images/projects/splitr.webp",
 
+        technologies: [
+          "Next.js",
+          "React.js",
+          "Tailwind CSS",
+          "Convex",
+          "Clerk",
+          "Vercel",
+        ],
+        liveUrl: "https://splitr-gamma-five.vercel.app/",
+        githubUrl: "https://github.com/Dhruv-201004/Splitr",
+        date: "August 2025",
+        category: "MERN",
+      },
       {
         title: "Resume Insight",
         description:
-          "A smart resume analyzer leveraging Gemini AI to efficiently and fairly match resumes with job descriptions.",
+          "A smart Resume Analyzer powered by Gemini AI that efficiently and fairly matches candidate resumes with job descriptions, helping recruiters and applicants save time while ensuring accurate, data-driven evaluations.",
         image: "/images/projects/resume-insight.webp",
 
         technologies: [
@@ -71,6 +89,16 @@ const Projects = React.memo(() => {
         githubUrl: "https://github.com/Dhruv-201004/AI-Powered-Resume-Analyzer",
         date: "June 2025",
         category: "AI & Data Science",
+      },
+      {
+        title: "React Projects",
+        description:
+          "A collection of simple React apps to practice frontend skills, including a Password Generator, To-Do Manager, Movie Finder, Weather Checker, and Admin Dashboard. Focused on React hooks, state, and Tailwind CSS.",
+        image: "/images/projects/react-projects.webp",
+        technologies: ["React.js", "Tailwind CSS", "JavaScript","HTML5", "CSS3"],
+        githubUrl: "https://github.com/Dhruv-201004/React-Projects",
+        date: "August 2025",
+        category: "React",
       },
     ],
     []
@@ -244,32 +272,37 @@ const Projects = React.memo(() => {
 
                 {/* Buttons */}
                 <div className="flex space-x-3">
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`flex-1 py-2 px-4 rounded-lg text-center text-sm font-medium transition-all duration-100 flex items-center justify-center space-x-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${
-                      isDark
-                        ? "bg-white text-black hover:bg-gray-100 focus-visible:ring-white/70 focus-visible:ring-offset-black"
-                        : "bg-gray-900 text-white hover:bg-gray-800 focus-visible:ring-gray-700 focus-visible:ring-offset-white"
-                    }`}
-                  >
-                    <ExternalLink size={14} />
-                    <span>Live Demo</span>
-                  </a>
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`flex-1 py-2 px-4 rounded-lg text-center text-sm font-medium transition-all duration-100 flex items-center justify-center space-x-2 border focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${
-                      isDark
-                        ? "border-white/20 text-white hover:bg-white/10 focus-visible:ring-white/50 focus-visible:ring-offset-black"
-                        : "border-gray-300 text-gray-700 hover:bg-gray-50 focus-visible:ring-gray-300 focus-visible:ring-offset-white"
-                    }`}
-                  >
-                    <Github size={14} />
-                    <span>Code</span>
-                  </a>
+                  {project.liveUrl && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`flex-1 py-2 px-4 rounded-lg text-center text-sm font-medium transition-all duration-100 flex items-center justify-center space-x-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${
+                        isDark
+                          ? "bg-white text-black hover:bg-gray-100 focus-visible:ring-white/70 focus-visible:ring-offset-black"
+                          : "bg-gray-900 text-white hover:bg-gray-800 focus-visible:ring-gray-700 focus-visible:ring-offset-white"
+                      }`}
+                    >
+                      <ExternalLink size={14} />
+                      <span>Live Demo</span>
+                    </a>
+                  )}
+
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`flex-1 py-2 px-4 rounded-lg text-center text-sm font-medium transition-all duration-100 flex items-center justify-center space-x-2 border focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${
+                        isDark
+                          ? "border-white/20 text-white hover:bg-white/10 focus-visible:ring-white/50 focus-visible:ring-offset-black"
+                          : "border-gray-300 text-gray-700 hover:bg-gray-50 focus-visible:ring-gray-300 focus-visible:ring-offset-white"
+                      }`}
+                    >
+                      <Github size={14} />
+                      <span>Code</span>
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
